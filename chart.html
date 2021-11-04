@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="jquery-2.2.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+
+</head>
+<body>
+  <div>
+    <canvas id="monthChart"></canvas>
+  </div>
+  
+  <script>
+    $(function(){
+      // var ctx = $('#monthChart');
+       
+  
+      // var myChart = new Chart(ctx, {          
+      //     type: 'bar',          
+      //     data: {
+      //       labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],        
+      //       datasets: [{            
+      //         label: '2020년',             
+      //         backgroundColor: "#1E90FF",             
+      //         data: [                
+      //               '100',200,300,400,500,600, 100,200,300,400,500,600
+      //           ]         
+      //         },{            
+      //             label: '2021년',             
+      //             backgroundColor: "#F7464A",            
+      //             data: [                 
+      //               100,200,300,400,500,600, 100,200,300,400,500,600
+      //             ]        
+      //       }]    
+      //     },          
+      //     options: {                      
+  
+      //     }  
+  
+          
+      // });
+  
+  
+  
+      var barChartData = {                
+        labels: ["January", "February", "March", "April", "May", "June", "July"],         
+        datasets: [{             
+          label: 'Pass',             
+          backgroundColor: "#1E90FF",             
+          data: [                
+            100,                 
+            200,                 
+            300,                 
+            400,                
+            500,                 
+            600,                 
+            700           
+          ]         
+        }, {            
+          label: 'NG',             
+          backgroundColor: "#F7464A",            
+          data: [                 
+            100,                 
+            200,                 
+            300,                 
+            400,                
+            500,                 
+            600,                 
+            700              
+          ]        
+        }]     
+      };  
+  
+      window.onload = function() {     
+        var ctx = $('#monthChart').get(0).getContext("2d");     
+        window.theChart = new Chart(ctx, {          
+          type: 'bar',          
+          data: barChartData,          
+          options: {                
+  
+          }  
+      }); }
+  
+  
+  
+  
+      
+  
+  });
+  </script>
+  
+  
+</body>
+</html>
+
+
+
+
